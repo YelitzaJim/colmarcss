@@ -43,7 +43,7 @@ header{
     width: auto;
 }
 
-nav{
+.menus{
     position:relative;
     display: flex;
     margin-top: 16px;
@@ -53,7 +53,51 @@ nav li{
     list-style: none;
     padding-right:  24px;
 }
+.iconos{
+    display: none;   
+}
 
+@media only screen and (max-width:480px){
+    header{
+        width: 100%;
+        height:64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: 0px;
+    }
+  .tout-menu{
+    position:relative;
+    width: 100%;
+  }
+ 
+    .menus{
+        display: none;
+       
+    }
+
+    .logo{
+        display: none;
+    }
+    .logo p{
+        display:none;
+    }
+    .iconos{
+        position:relative;
+        display:flex;
+        justify-content:space-around;
+        align-self: center;
+        width: 100%;
+    } 
+    nav {
+        position:relative;
+        list-style: none;
+        width: 100%;
+        justify-items: center;
+    }
+  
+
+}
 /* PREMIER BLOQUE FLEX 1 */
 .banner{
     background-color: rgb(175, 181, 187);
@@ -67,6 +111,7 @@ nav li{
     width:60%;
 }
 .imgbanner img{
+    position: relative;
     width: 100%;
     padding:32px 24px;
 }
@@ -102,6 +147,46 @@ nav li{
     font-weight: bold;
     text-align: center;
 }
+
+@media only screen and (max-width:480px){
+    .banner{
+        justify-content: space-around;
+        width: 100%;
+        display: block;
+    }
+    .imgbanner{
+        position: relative;
+        width: 100%;
+    }
+    .imgbanner img{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .textbanner{
+        position: relative;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 32px;
+        padding-top: 0px;
+    }
+    .texto{
+        margin-left: 10px;
+        padding-top: 0px;
+        padding-bottom: 32px;
+    }
+    .texto h1,h3{
+        margin-left: 10px;
+    }
+    .texto h1{
+        margin-bottom: 32px;
+        
+    }
+    .texto h3{
+        margin-bottom: 24px;
+    }
+    
+      }
+
 /* FLEX 1*/
 .contentFlex{
     position:relative;
@@ -185,7 +270,61 @@ nav li{
 .minitext a{
     color:rgb(8, 85, 199)
 }
+@media only screen and (max-width:480px){
+    .contentFlex{
+        position: relative;
+        width:95%;
+        padding-left: 0px 0px;
+        margin-right: 16px;
+        
+    
+    }
+    .contentFlex .a{
+        width: 0%;
+        display: none;
+    }
+    .groupe1{
+        position:relative;
+        width: 100%;
+        display: block;
+    }
+    .b, .c, .d  {
+        position:relative;
+        display:block;
+        margin-bottom: 16px;
+        width:100%;
+    }
+    .minimage{
+        position:relative;
+        width: 100%;
+        height: 260px;  
+        align-items: center; 
+        padding-right: 16px;
+        margin-right: 16px;
+    }
+    .minimage img{
+        position: relative;
+        max-width:100%;
+        height: 260px;
+        object-fit: cover;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;  
+    }
 
+    .d{
+        background-color:white;
+    }
+    .minitext{
+        position:relative;
+        width: 100%; }
+
+    .minitext p{
+
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
 
 /* Bloque Grid*/
 .contentGrid{
@@ -197,15 +336,15 @@ nav li{
     justify-content: center;
 }
 .contentGrid h2{
-    padding-top: 32px;
+  
     padding-bottom: 32px;
     text-align: center;
 }
 .tableGrid{
     position: relative;
     display: grid;
-    justify-content: center;
-    width: 88%;
+    justify-content: space-around;
+    width: 85%;
     height: auto;
     grid-area: "element1 element2 element3"
                 "element4 element5 element6";
@@ -229,11 +368,53 @@ nav li{
 .element h3,p {
     margin-left: 16px;
 }
+@media only screen and (max-width:480px){
+    .contentGrid{
+        background-color: white;
+        position: relative;
+        width: 100%;
+        padding-right: 16px;
+        padding-bottom: 0px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    .tableGrid{
+        background-color: white;
+        position: relative;
+        grid-template: repeat(9, 1fr)/1fr; 
+        width: 95%; 
+        padding-right: 16px;
+        padding-bottom: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        row-gap: 8px;
+    }
+    .element{
+        background-color:  rgb(204, 210, 216);
+        padding-bottom: 0px;
+        margin-right: 16px;
+    }
+    .element img{
+        display: none;
+    }
+    .element p{
+        display: none;
+    }
+    .e
+    .element h3{
+       
+        position:relative;
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+}
 
 /*GRID 2*/
 .master2{
     position:relative;
     display:block;
+    justify-content: center;
     width:100%;
     height: auto;
 }
@@ -252,6 +433,7 @@ nav li{
     grid-template-rows: repeat(3, 1fr);
     gap:24px;
 }
+
 video{
     position: relative;
     width: 100%;
@@ -299,6 +481,35 @@ width:65%;
     padding-left:24px;
 }
 
+@media only screen and (max-width:480px){
+    .master2 h2{
+        padding-top: 0px;
+        padding-bottom: 16px;
+    }
+    .elem{
+        display: none;
+    }
+    .textVideo{
+        display: none;
+
+    }
+    .contentGrid2{
+        position:relative;
+        display:grid;
+        width: 100%;
+        height: auto;
+        padding-top:0px;
+        grid-template-columns: 100%;
+        grid-template-rows:  1fr;
+       
+    }
+    .video{
+        width: 100%;
+        margin-bottom: 24px;
+        padding-left:0px;
+    }
+    
+}
 /*footer*/
 footer{
     position:relative;
@@ -307,6 +518,7 @@ footer{
     width: 100%;
 }
 footer p{
+    
     width: 50%;
     text-align: left;
     margin-left:24px;
@@ -321,4 +533,17 @@ footer p{
 .navfooter li{
     list-style: none;
     padding-left:20px;
+}
+@media only screen and (max-width:480px){
+
+footer li a{
+        display: none;
+    }  
+footer p{
+    position:relative;
+    width: 100%;
+    padding-top: 16px;
+    padding-right: 16px;
+    font-size: 10px;
+}
 }
